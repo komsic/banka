@@ -48,6 +48,12 @@ h1, h2, h3, h4 {
     margin: 0 auto;
 }
 
+@media screen and (min-width: 1024px) {
+    .row-max-size {
+        max-width: 1024px;
+    }
+}
+
 .button {
     padding: 0.4em 1em;
     color: darkgoldenrod;
@@ -193,4 +199,25 @@ form > * + * {
     border-radius: 0.3em;
     padding: 1.5625em;
     min-width: 200px;
+    font-size: .75em;
+}
+
+.media {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.media > * + * {
+    margin-left: 1em;
+}
+
+.media > img {
+    height: 3em;
+    border-radius: 1.5em;
 }
