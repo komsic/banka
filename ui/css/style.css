@@ -39,7 +39,9 @@ h1, h2, h3, h4 {
     margin: 0;
 }
 
-
+.outer-spacing {
+    margin-bottom: 2.5rem;
+}
 
 .row-max-size {
     width: 80%;
@@ -112,3 +114,60 @@ h1, h2, h3, h4 {
     display: inline-block;
     margin-top: 1rem;
 }
+
+/* form modules */
+.form {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.form__email {
+    flex-grow: 2;
+    flex-shrink: 1;
+}
+
+.form__password {
+    flex-grow: 2;
+    flex-shrink: 1;
+}
+
+.form__login {
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+form > * + * {
+    margin-left: 1.5em;
+}
+
+@media screen and (max-width: 616px) {
+    .form__email {
+        flex: 1;
+    }
+
+    .form__password {
+        flex: 1;
+    }
+    
+    .form__login {
+        flex: 1;
+    }
+
+    form > * + * {
+        margin-left: 0;
+        margin-top: 1.5625em;
+    }
+    
+    .form {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
