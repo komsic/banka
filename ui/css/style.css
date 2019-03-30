@@ -135,17 +135,12 @@ h1, h2, h3, h4 {
     flex-wrap: wrap
 }
 
-.form__email {
+.form__text {
     flex-grow: 2;
     flex-shrink: 1;
 }
 
-.form__password {
-    flex-grow: 2;
-    flex-shrink: 1;
-}
-
-.form__login {
+.form__button {
     flex-grow: 1;
     flex-shrink: 2;
 }
@@ -155,15 +150,7 @@ form > * + * {
 }
 
 @media screen and (max-width: 616px) {
-    .form__email {
-        flex: 1;
-    }
-
-    .form__password {
-        flex: 1;
-    }
-    
-    .form__login {
+    .form__text, .form__button {
         flex: 1;
     }
 
