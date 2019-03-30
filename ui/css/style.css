@@ -34,7 +34,7 @@ p {
     margin: 0;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, serif;
     margin: 0;
 }
@@ -176,6 +176,10 @@ form > * + * {
     margin-left: -1.5625em;
 }
 
+.list--dashboard {
+    margin-top: -1.5625em;
+}
+
 .list > * {
     flex: 1 calc(50% - 1.5625em);
     margin-top: 1.5625em;
@@ -188,6 +192,16 @@ form > * + * {
     padding: 1.5625em;
     min-width: 200px;
     font-size: .75em;
+}
+
+.list-item--dashboard {
+    background-color: darkgoldenrod;
+    text-align: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    width: auto;
+    cursor: pointer;
 }
 
 .media {
@@ -215,4 +229,73 @@ form > * + * {
     color: #878f97;
     text-align: center;
     padding: 1em 0;
+}
+
+
+/* transaction module */
+.trans {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    border: 1px solid darkgoldenrod;
+    align-items: center;
+    padding: 0.4em 1em;
+    border-radius: .3em;
+    text-align: center;
+}
+
+.trans > * {
+    flex: 1 calc(50% - 1.5625em);
+}
+
+.trans > * + * {
+    margin-left: 0.5em;
+}
+
+.trans p {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.trans small {
+    font-size: .7rem;
+}
+
+.amount {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+}
+
+.amount > * {
+    display: inline-block;
+    align-self: center;
+}
+
+.amount__value {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.amount__currency, .amount__kobo {
+    font-size: .8rem;
+}
+
+@media screen and (min-width: 616px) {
+    .trans p, .amount__currency, .amount__kobo {
+        font-size: 0.6rem;
+    }
+
+    .trans small {
+        font-size: .5rem;
+    }
+    
+    .amount__value {
+        font-size: 1rem;
+    }
 }
