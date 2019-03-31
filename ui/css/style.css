@@ -329,3 +329,26 @@ form > * + * {
     width: 100%;
     margin-bottom: 1.5625em;
 }
+
+.account-container {
+    background-color: #fff8e1;
+    padding: 1.5625em;
+    border-radius: .3em;
+}
+
+.account {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    text-align: center;
+}
+
+.account > * {
+    flex: 1;
+}
+
+.balance {
+    text-align: center;
+}
