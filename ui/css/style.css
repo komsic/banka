@@ -316,11 +316,16 @@ form > * + * {
 }
 
 .aside {
-    flex-grow: 1;
-    flex-shrink: 3;
+    flex-grow: 1.5;
+    flex-shrink: 2.5;
 }
 
 .main {
-    flex-grow: 3;
-    flex-shrink: 1;
+    flex-grow: 2.5;
+    flex-shrink: 1.5;
+}
+
+.main > * {
+    width: 100%;
+    margin-bottom: 1.5625em;
 }
