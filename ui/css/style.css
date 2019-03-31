@@ -39,6 +39,15 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #424242;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .outer-spacing {
     margin-bottom: 2.5rem;
 }
@@ -47,6 +56,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.row-max-size--90 {
+    width: 90%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -83,6 +96,24 @@ h1, h2, h3, h4, h5, h6 {
 .header {
     background-color: #ffcf40;
     padding: 0.4em 0;
+}
+
+.header__inner {
+    display: flex; 
+    align-items: center;
+}
+
+.header__menu-more {
+    display: none;
+    font-size: 2.5rem;
+    margin-right: 1.5625em;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 695px) {
+    .header__menu-more {
+        display: block;
+    }
 }
 
 .header__title {
@@ -300,7 +331,7 @@ form > * + * {
     }
 }
 
-.container {
+.acct-container {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -309,20 +340,70 @@ form > * + * {
     margin-left: -1.5625em;
 }
 
-.container > * {
+.acct-container > * {
     margin-left: 1.5625em;
     background-color: #fff;
     padding: 1.5625em;
 }
 
 .aside {
-    flex-grow: 1.5;
-    flex-shrink: 2.5;
+    flex-grow: 20%;
+}
+
+.aside-list {
+    height: 100%;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+}
+
+.aside-list > * {
+    border-radius: .3em;
+    border: 1px solid darkgoldenrod;
+}
+
+.aside-list > li > a {
+    display: block;
+    padding: .5em 1em;
+}
+
+.close-aside-container {
+    display: none;
+    align-self: flex-end;
+    position: relative;
+    border: initial;
+}
+
+@media screen and (max-width: 695px) {
+    .aside {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: -5%;
+        bottom: calc(-1vw - 2em);
+        margin-left: 5%;
+        background-color: #ccc;
+    }
+    
+    .close-aside-container {
+        display: block;
+        border-radius: 0;
+    }
+    
+    .close-aside {
+        background: transparent;
+        border: initial;
+        font-size: 3em;
+        padding: 0
+    }
+}
+
+.aside-list > * + * {
+    margin-top: .5em;
 }
 
 .main {
-    flex-grow: 2.5;
-    flex-shrink: 1.5;
+    flex-grow: 1;
 }
 
 .main > * {
