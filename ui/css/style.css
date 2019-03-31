@@ -352,3 +352,35 @@ form > * + * {
 .balance {
     text-align: center;
 }
+
+.account-trans-container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.account-trans-container > * {
+    flex: 1;
+    align-items: center;
+    margin-top: .782em;
+    border-bottom-color: dimgrey;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.account-trans {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.account-trans > * {
+    flex: 1;
+}
