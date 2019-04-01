@@ -39,6 +39,15 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: #424242;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .outer-spacing {
     margin-bottom: 2.5rem;
 }
@@ -47,6 +56,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.row-max-size--90 {
+    width: 90%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -83,6 +96,24 @@ h1, h2, h3, h4, h5, h6 {
 .header {
     background-color: #ffcf40;
     padding: 0.4em 0;
+}
+
+.header__inner {
+    display: flex; 
+    align-items: center;
+}
+
+.header__menu-more {
+    display: none;
+    font-size: 2.5rem;
+    margin-right: 1.5625em;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 695px) {
+    .header__menu-more {
+        display: block;
+    }
 }
 
 .header__title {
@@ -298,4 +329,139 @@ form > * + * {
     .amount__value {
         font-size: 1rem;
     }
+}
+
+.acct-container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    margin-left: -1.5625em;
+}
+
+.acct-container > * {
+    margin-left: 1.5625em;
+    background-color: #fff;
+    padding: 1.5625em;
+}
+
+.aside {
+    flex-grow: 20%;
+}
+
+.aside-list {
+    height: 100%;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+}
+
+.aside-list > * {
+    border-radius: .3em;
+    border: 1px solid darkgoldenrod;
+}
+
+.aside-list > li > a {
+    display: block;
+    padding: .5em 1em;
+}
+
+.close-aside-container {
+    display: none;
+    align-self: flex-end;
+    position: relative;
+    border: initial;
+}
+
+@media screen and (max-width: 695px) {
+    .aside {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: -5%;
+        bottom: calc(-1vw - 2em);
+        margin-left: 5%;
+        background-color: #ccc;
+    }
+    
+    .close-aside-container {
+        display: block;
+        border-radius: 0;
+    }
+    
+    .close-aside {
+        background: transparent;
+        border: initial;
+        font-size: 3em;
+        padding: 0
+    }
+}
+
+.aside-list > * + * {
+    margin-top: .5em;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.main > * {
+    width: 100%;
+    margin-bottom: 1.5625em;
+}
+
+.account-container {
+    background-color: #fff8e1;
+    padding: 1.5625em;
+    border-radius: .3em;
+}
+
+.account {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    text-align: center;
+}
+
+.account > * {
+    flex: 1;
+}
+
+.balance {
+    text-align: center;
+}
+
+.account-trans-container {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.account-trans-container > * {
+    flex: 1;
+    align-items: center;
+    margin-top: .782em;
+    border-bottom-color: dimgrey;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.account-trans {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+}
+
+.account-trans > * {
+    flex: 1;
 }

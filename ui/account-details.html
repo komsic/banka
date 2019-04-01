@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Account Details</title>
+</head>
+<body>
+    <header class="header outer-spacing">
+        <div class="header__inner row-max-size row-max-size--90">
+            <div id="menu-more" class="header__menu-more">&#x2630</div>
+            <h1 class="header__title">Account Details</h1>
+        </div>
+    </header>
+    
+    <div class="row-max-size row-max-size--90">
+        <div class="acct-container">
+            <aside class="aside" id="aside">
+                <ul class="aside-list">
+                    <div class="close-aside-container">
+                        <button id="close" class="close-aside">&#x00D7</button>
+                    </div>
+                    <li><a href="">Print Statement</a></li>
+                    <li><a href="">Change Status</a></li>
+                    <li><a href="">Deactivate</a></li>
+                    <li><a href="">Delete</a></li>
+                </ul>
+            </aside>
+
+            <main class="main">
+                <form class="form" action="">
+                    <input class="form__text" type="text" placeholder="Search for transaction by id or date">
+                    <input class="form__button button button--cta" type="submit" value="Search">
+                </form>
+                
+                <div class="account-container">
+                    <div class="account">
+                        <div>
+                            <small>Account Number <small>(Active)</small></small>
+                            <p>0218547925</p>
+                        </div>
+
+                        <div>
+                            <small>Account Type</small>
+                            <p>Current</p>
+                        </div>
+                    </div>
+                    
+                    <div class="balance">
+                        <small>Account Balance</small>
+                        <p class="amount">
+                            <span class="amount__currency">#</span>
+                            <span class="amount__value">20,000</span>
+                            <span class="amount__kobo">.00</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5>Transaction History</h5>
+                    
+                    <ul class="account-trans-container">
+                        <li class="account-trans">
+                            <p>29th Mar, 2019</p>
+                            
+                            <div>
+                                <small>(successful)</small>
+                                <p>Deposit</p>
+                            </div>
+                            
+                            <p class="amount">
+                                <span class="amount__currency">#</span>
+                                <span class="amount__value">20,000</span>
+                                <span class="amount__kobo">.00</span>
+                            </p>
+                        </li>
+                        
+                        <li class="account-trans">
+                            <p>29th Mar, 2019</p>
+                            
+                            <div>
+                                <small>(successful)</small>
+                                <p>Deposit</p>
+                            </div>
+                            
+                            <p class="amount">
+                                <span class="amount__currency">#</span>
+                                <span class="amount__value">20,000</span>
+                                <span class="amount__kobo">.00</span>
+                            </p>
+                        </li>
+                        
+                        <li class="account-trans">
+                            <p>29th Mar, 2019</p>
+                            
+                            <div>
+                                <small>(failed)</small>
+                                <p>Deposit</p>
+                            </div>
+                            
+                            <p class="amount">
+                                <span class="amount__currency">#</span>
+                                <span class="amount__value">20,000</span>
+                                <span class="amount__kobo">.00</span>
+                            </p>
+                        </li>
+                        
+                        <li class="account-trans">
+                            <p>29th Mar, 2019</p>
+                            
+                            <div>
+                                <small>(successful)</small>
+                                <p>Withdrawal</p>
+                            </div>
+                            
+                            <p class="amount">
+                                <span class="amount__currency">#</span>
+                                <span class="amount__value">20,000</span>
+                                <span class="amount__kobo">.00</span>
+                            </p>
+                        </li>
+                        
+                        <li class="account-trans">
+                            <p>29th Mar, 2019</p>
+                            
+                            <div>
+                                <small>(successful)</small>
+                                <p>Deposit</p>
+                            </div>
+                            
+                            <p class="amount">
+                                <span class="amount__currency">#</span>
+                                <span class="amount__value">20,000</span>
+                                <span class="amount__kobo">.00</span>
+                            </p>
+                        </li>
+                        
+                        <li class="account-trans">
+                            <p>29th Mar, 2019</p>
+                            
+                            <div>
+                                <small>(failed)</small>
+                                <p>Withdrawal</p>
+                            </div>
+                            
+                            <p class="amount">
+                                <span class="amount__currency">#</span>
+                                <span class="amount__value">20,000</span>
+                                <span class="amount__kobo">.00</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Made with love by komsic</p>
+    </footer>
+    
+    <script src="./js/menu-control.js"></script>
+</body>
+</html>
