@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header outer-spacing">
+        <div class="header__inner row-max-size row-max-size--90">
+            <div id="menu-more" class="header__menu-more">&#x2630</div>
+            <h1 class="header__title">Client Dashboard</h1>
+        </div>
+    </header>
+    
+    <div class="row-max-size row-max-size--90 outer-spacing">
+        <div class="acct-container">
+            <aside class="aside" id="aside">
+                <ul class="aside-list">
+                    <div class="close-aside-container">
+                        <button id="close" class="close-aside">&#x00D7</button>
+                    </div>
+                    <li><a href="">Deactivate</a></li>
+                    <li><a href="">Create Account</a></li>
+                    <li><a href="">Update Profile</a></li>
+                    <li><a href="">Logout</a></li>
+                </ul>
+            </aside>
+
+            <main class="main">
+                <form class="form" action="">
+                    <input class="form__text" type="text" placeholder="Search for transaction by id">
+                    <input class="form__button button button--cta" type="submit" value="Search">
+                </form>
+                
+                <div class="media">
+                    <img src="./images/dum-img.jpg" alt="client image">
+                    <p>Ciroma Chukwuma Adekunle</p>
+                </div>
+                
+                <div>
+                    <h3>Accounts</h3>
+                    <ul class="list list--c-trans">
+                        <li class="trans">
+                            <div><strong>Acct No</strong></div>
+                            <div><strong>Type</strong></div>
+                            <div><strong>Balance</strong></div>
+                        </li>
+                        <li class="trans">
+                            <div>8520147856</div>
+                            <div>Fixed-deposit</div>
+                            <div>#51,258.32</div>
+                        </li>
+                        <li class="trans">
+                            <div>8520147856</div>
+                            <div>Current</div>
+                            <div>#51,258.32</div>
+                        </li>
+                        <li class="trans">
+                            <div>8520147856</div>
+                            <div>Savings</div>
+                            <div>#51,258.32</div>
+                        </li>
+                    </ul>
+                    
+                    <button class="button button--cta button--full-width">Create Account</button>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>Made with love by komsic</p>
+    </footer>
+    
+    <script src="./js/menu-control.js"></script>
+</body>
+</html>
