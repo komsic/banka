@@ -217,6 +217,10 @@ form > * + * {
     margin-left: 1.5625em;
 }
 
+.list--c-trans > * {
+    flex: 1 calc(100% - 1.5625em);
+}
+
 .list-item {
     background-color: #fff;
     border-radius: 0.3em;
@@ -494,4 +498,14 @@ form > * + * {
 
 .trans-details > * + * {
     margin-top: 1.5625em;
+}
+
+/* the list of recent transaction in cashier dashboard */
+.c-trans {
+    background-color: #fff8e1;
+    padding: 1em;
+}
+
+.c-trans > h3 {
+    text-align: center;
 }
