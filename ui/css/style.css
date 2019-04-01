@@ -246,6 +246,14 @@ form > * + * {
     margin-top: 1rem;
 }
 
+.media--start {
+    justify-content: flex-start;
+}
+
+.media--end {
+    justify-content: flex-end;
+}
+
 .media > * + * {
     margin-left: 1em;
 }
@@ -464,4 +472,26 @@ form > * + * {
 
 .account-trans > * {
     flex: 1;
+}
+
+.trans-details {
+    background-color: #fff8e1;
+    padding: 1.5625em;
+}
+
+.trans-details > * {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+}
+
+.trans-details > * > * + * {
+    margin-left: 1em;
+}
+
+.trans-details > * + * {
+    margin-top: 1.5625em;
 }
