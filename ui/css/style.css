@@ -267,9 +267,15 @@ form > * + * {
     margin-left: 1em;
 }
 
-.media > img {
+.media__img, .media.media > img {
     height: 3em;
-    border-radius: 1.5em;
+    border-radius: 50%;
+}
+
+.media__img {
+    display: block;
+    margin: 0 auto;
+    height: 6em;
 }
 
 .footer {
@@ -494,7 +500,15 @@ form > * + * {
     display: -ms-flex;
     display: -o-flex;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+}
+
+.trans-details > * > * {
+    flex: 1;
+}
+
+.trans-details > * > *:nth-child(2n - 1) {
+    text-align: right;
 }
 
 .trans-details > * > * + * {
