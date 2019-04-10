@@ -15,18 +15,18 @@
         </div>
     </header>
     
-    <form class="outer-spacing row-max-size form" action="">
+    <form class="outer-spacing row-max-size form" onsubmit="modalControl('demo-search')">
         <input class="form__text" type="text" placeholder="Search for Acct, Transaction or User">
         <input class="form__button button button--cta" type="submit" value="Search">
     </form>
     
     <main class="outer-spacing row-max-size">
         <ul class="list list--dashboard">
-            <li class="list-item list-item--dashboard">List of Accounts</li>
-            <li class="list-item list-item--dashboard">List of Users</li>
-            <li class="list-item list-item--dashboard">Update Profile</li>
+            <li class="list-item list-item--dashboard" onclick="modalControl('acct-list')">List of Accounts</li>
+            <li class="list-item list-item--dashboard" onclick="modalControl('user-list')">List of Users</li>
+            <li class="list-item list-item--dashboard" onclick="linkToProfile()">Update Profile</li>
             <li class="list-item list-item--dashboard">Create Staff</li>
-            <li class="list-item list-item--dashboard">Go to Cashier Dashboard</li>
+            <li class="list-item list-item--dashboard" onclick="linkToCashier()">Go to Cashier Dashboard</li>
         </ul>
     </main>
     
@@ -34,7 +34,7 @@
         <h3>Recents Transactions</h3>
         
         <ul class="list list--trans">
-            <li class="trans">
+            <li class="trans" onclick="linkToTrans()">
                 <div>
                     <small>Success</small>
                     <p>24th Mar, 2019</p>
@@ -53,7 +53,7 @@
                 </div>
             </li>
             
-            <li class="trans">
+            <li class="trans" onclick="linkToTrans()">
                 <div>
                     <small>Success</small>
                     <p>24th Mar, 2019</p>
@@ -72,7 +72,7 @@
                 </div>
             </li>
             
-            <li class="trans">
+            <li class="trans" onclick="linkToTrans()">
                 <div>
                     <small>Fail</small>
                     <p>24th Mar, 2019</p>
@@ -91,7 +91,7 @@
                 </div>
             </li>
             
-            <li class="trans">
+            <li class="trans" onclick="linkToTrans()">
                 <div>
                     <small>Success</small>
                     <p>24th Mar, 2019</p>
@@ -110,7 +110,7 @@
                 </div>
             </li>
             
-            <li class="trans">
+            <li class="trans" onclick="linkToTrans()">
                 <div>
                     <small>Success</small>
                     <p>24th Mar, 2019</p>
@@ -129,7 +129,7 @@
                 </div>
             </li>
             
-            <li class="trans">
+            <li class="trans" onclick="linkToTrans()">
                 <div>
                     <small>Success</small>
                     <p>24th Mar, 2019</p>
@@ -148,7 +148,7 @@
                 </div>
             </li>
             
-            <li class="trans">
+            <li class="trans" onclick="linkToTrans()">
                 <div>
                     <small>Success</small>
                     <p>24th Mar, 2019</p>
@@ -167,7 +167,7 @@
                 </div>
             </li>
             
-            <li class="trans">
+            <li class="trans" onclick="linkToTrans()">
                 <div>
                     <small>Success</small>
                     <p>24th Mar, 2019</p>
@@ -186,7 +186,7 @@
                 </div>
             </li>
             
-            <li class="trans">
+            <li class="trans" onclick="linkToTrans()">
                 <div>
                     <small>Success</small>
                     <p>24th Mar, 2019</p>
@@ -205,7 +205,7 @@
                 </div>
             </li>
             
-            <li class="trans">
+            <li class="trans" onclick="linkToTrans()">
                 <div>
                     <small>Success</small>
                     <p>24th Mar, 2019</p>
@@ -229,5 +229,168 @@
     <footer class="footer">
         <p>Made with love by komsic</p>
     </footer>
+    
+    <div class="modal" id="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-body">
+            <button class="modal-close" id="modal-close">close</button>
+            
+            <div id="demo-search" class="demo-search">
+                <h4>DEMO MODE</h4>
+                <p>Hello there,</p>
+                <p>Hope you are having a great day. This app have not been connected to the backend yet, so you need to indicate what you are searching for.</p>
+                <p>Thanks</p>
+                <p>komsic</p>
+
+                <div class="demo-btn" id="demo-btn">
+                    <button><a href="#modal" onclick="modalControl('acct-list'); la('demo-search')">Search for Account</a></button>
+                    <button><a href="#modal" onclick="modalControl('user-list'); la('demo-search')">Search for User</a></button>
+                    <button><a href="./transaction-details.html">Search for Transaction</a></button>
+                </div>
+            </div>
+            
+            <div class="acct-list" id="acct-list">
+                <h2>List of Accounts</h2>
+                
+                <ul>
+                    <li>
+                        <a href="./account-details.html" class="user-list-item acct-list-item">
+                            <img src="./images/dum-img.jpg" alt="">
+                            <div>
+                                <p><small>0745658954</small></p>
+                                <p>O. Adekola</p>
+                            </div>
+                            <div>
+                                <p><small>Balance</small></p>
+                                <p>#20,000</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./account-details.html" class="user-list-item acct-list-item">
+                            <img src="./images/dum-img.jpg" alt="">
+                            <div>
+                                <p><small>0745658954</small></p>
+                                <p>O. Adekola</p>
+                            </div>
+                            <div>
+                                <p><small>Balance</small></p>
+                                <p>#20,000</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./account-details.html" class="user-list-item acct-list-item">
+                            <img src="./images/dum-img.jpg" alt="">
+                            <div>
+                                <p><small>0745658954</small></p>
+                                <p>O. Adekola</p>
+                            </div>
+                            <div>
+                                <p><small>Balance</small></p>
+                                <p>#20,000</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./account-details.html" class="user-list-item acct-list-item">
+                            <img src="./images/dum-img.jpg" alt="">
+                            <div>
+                                <p><small>0745658954</small></p>
+                                <p>O. Adekola</p>
+                            </div>
+                            <div>
+                                <p><small>Balance</small></p>
+                                <p>#20,000</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./account-details.html" class="user-list-item acct-list-item">
+                            <img src="./images/dum-img.jpg" alt="">
+                            <div>
+                                <p><small>0745658954</small></p>
+                                <p>O. Adekola</p>
+                            </div>
+                            <div>
+                                <p><small>Balance</small></p>
+                                <p>#20,000</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+            
+            <div class="user-list" id="user-list">
+                <h2>List of Users</h2>
+                <ul>
+                    <li>
+                        <a href="./user-profile.html" class="user-list-item">
+                            <img src="./images/dum-img.jpg" alt="">
+                            <div>
+                                <p>Odunlade Adekola</p>
+                                <p>oade@email.com</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./user-profile.html" class="user-list-item">
+                            <img src="./images/dum-img.jpg" alt="">
+                            <div>
+                                <p>Odunlade Adekola</p>
+                                <p>oade@email.com</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./user-profile.html" class="user-list-item">
+                            <img src="./images/dum-img.jpg" alt="">
+                            <div>
+                                <p>Odunlade Adekola</p>
+                                <p>oade@email.com</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./user-profile.html" class="user-list-item">
+                            <img src="./images/dum-img.jpg" alt="">
+                            <div>
+                                <p>Odunlade Adekola</p>
+                                <p>oade@email.com</p>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./user-profile.html" class="user-list-item">
+                            <img src="./images/dum-img.jpg" alt="">
+                            <div>
+                                <p>Odunlade Adekola</p>
+                                <p>oade@email.com</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="status-dialog" id="status-dialog">
+                <h2>Status</h2>
+                <img src="./images/green-check.png" alt="status icon">
+                <h4>Success</h4>
+                <p id="status-dialog__more-message">Transaction Successful</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/modal-control.js"></script>
 </body>
 </html>

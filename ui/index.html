@@ -27,10 +27,10 @@
         </div>
     </main>
     
-    <form class="form row-max-size outer-spacing" action="#login-as-demo">
+    <form class="form row-max-size outer-spacing" onsubmit="modalControl()">
         <input class="form__text" type="text" placeholder="Input Email">
         <input class="form__text" type="text" placeholder="Input Password">
-        <input class="form__button button button--cta" type="submit" value="Login">
+        <input class="form__button button button--cta" id="login" type="submit" value="Login">
     </form>
     
     <section class="features outer-spacing row-max-size">
@@ -118,5 +118,25 @@
     <footer class="footer">
         <p>Made with love by komsic</p>
     </footer>
+    
+    <div class="modal" id="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-body">
+            <button class="modal-close" id="modal-close">close</button>
+            <h4>DEMO MODE</h4>
+            <p>Hello there,</p>
+            <p>Hope you are having a great day. This app have not been connected to the backend yet, so you need to indicate who you are logging in as.</p>
+            <p>Thanks</p>
+            <p>komsic</p>
+            
+            <div class="demo-btn">
+                <button><a href="./client-dashboard.html">Login As Client</a></button>
+                <button><a href="./cashier-dashboard.html">Login As Cashier</a></button>
+                <button><a href="./admin-dashboard.html">Login As Admin</a></button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/modal-control.js"></script>
 </body>
 </html>

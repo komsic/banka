@@ -304,6 +304,10 @@ form > * + * {
     flex: 1 calc(50% - 1.5625em);
 }
 
+.trans + .trans {
+    cursor: pointer;
+}
+
 .trans > * + * {
     margin-left: 0.5em;
 }
@@ -483,6 +487,7 @@ form > * + * {
     display: -ms-flex;
     display: -o-flex;
     display: flex;
+    min-width: 332px;
 }
 
 .account-trans > * {
@@ -527,4 +532,147 @@ form > * + * {
 
 .c-trans > h3 {
     text-align: center;
+}
+
+.modal {
+    display: none;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-body {
+    position: fixed;
+    top: 3em;
+    right: 20%;
+    left: 20%;
+    bottom: 3em;
+    padding: 2em 3em;
+    background-color: white;
+    overflow: auto;
+}
+
+@media screen and (max-width: 500px) {
+    .modal-body {
+        right: 10%;
+        left: 10%;
+    }
+}
+
+.demo-btn > * + *, .modal-body > * + * {
+    margin-top: 0.5625em;
+}
+
+.modal-close {
+    position: absolute;
+    top: .3em;
+    right: .3em;
+    padding: .3em;
+    cursor: pointer;
+    font-size: 2em;
+    height: 1em;
+    width: 1em;
+    text-indent: 10em;
+    overflow: hidden;
+    border: 0;
+    background-color: white;
+}
+
+.modal-close::after {
+    position: absolute;
+    line-height: .5;
+    top: .2em;
+    left: .1em;
+    text-indent: 0;
+    content: '\00D7';
+}
+
+.demo-btn > * {
+    padding: 0;
+    border: 0;
+    background-color: #fff;
+}
+
+.demo-btn > *, .demo-btn > * > a {
+    display: block;
+    width: 100%;
+}
+
+.demo-btn > * > a {
+    padding: .5em;
+    background-color: gold;
+    border-radius: 0.3em;
+}
+
+.demo-search, .acct-list, .user-list, .update-profile, .change-password, .create-acct-container, .status-dialog, .create-acct-container{
+    display: none;
+    text-align: center;
+    margin: 2em 0;
+}
+
+.status-dialog > img {
+    width: 3rem;
+}
+
+.status-dialog > * + * {
+    margin-top: 1em;
+}
+
+.create-acct-form {
+    margin-top: 1.5625em;
+    text-align: center;
+}
+
+.form-btn {
+    padding: .5em;
+    background-color: gold;
+    border-radius: .3em;
+    border: 1px solid darkgoldenrod;
+}
+
+.modal-title {
+    text-align: center;
+}
+
+.create-acct-form > * + * {
+    margin-top: 1em;
+}
+
+.create-acct-form > div > * + * {
+    margin-left: 1em;
+    padding: .5em;
+    border: 1px solid darkgoldenrod;
+}
+
+.user-list-item {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    background-color: gold;
+    padding: .5em 1em;
+    border-radius: .3em;
+    margin-top: 1em;
+}
+
+.user-list-item > img {
+    margin-right: 2em;
+    border-radius: 50%;
+    height: 3em;
+}
+
+.acct-list-item > img {
+    margin-right: 0;
+}
+
+.acct-list-item {
+    justify-content: space-around;
 }

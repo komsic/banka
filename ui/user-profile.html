@@ -23,9 +23,12 @@
                     <div class="close-aside-container">
                         <button id="close" class="close-aside">&#x00D7</button>
                     </div>
-                    <li><a href="">Deactivate</a></li>
-                    <li><a href="">Update Profile</a></li>
-                    <li><a href="">Logout</a></li>
+                    
+                    <li><a href="#modal" onclick="modalControl('status-dialog')">Deactivate</a></li>
+                    
+                    <li><a href="#modal" onclick="modalControl('update-profile')">Update Profile</a></li>
+                    
+                    <li><a href="./index.html">Logout</a></li>
                 </ul>
             </aside>
 
@@ -59,7 +62,7 @@
                     </div>
                 </div>
                 
-                <button class="button button--cta button--full-width">Change Password</button>
+                <button class="button button--cta button--full-width" onclick="modalControl('change-password')">Change Password</button>
             </main>
         </div>
     </div>
@@ -68,6 +71,82 @@
         <p>Made with love by komsic</p>
     </footer>
     
+    <div class="modal" id="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-body">
+            <button class="modal-close" id="modal-close">close</button>
+            
+            <div id="create-acct-container" class="create-acct-container">
+                <h4 class="modal-title">Create New Account</h4>
+                <form action="./account-details.html" id="create-acct" 
+                   class="create-acct create-acct-form">
+                    <div>
+                        <label for="account-type">Account Type:</label>
+                        <select name="acct-type" id="account-type">
+                            <option value="savings">Savings</option>
+                            <option value="current">Current</option>
+                            <option value="savings">Fixed Deposit</option>
+                        </select>
+                    </div>
+                    
+                    <input type="submit" value="Create Account" class="form-btn">
+                </form>
+            </div>
+            
+            <div class="status-dialog" id="status-dialog">
+                <h2>Status</h2>
+                <img src="./images/green-check.png" alt="status icon">
+                <h4>Success</h4>
+<!--                <p id="status-dialog__more-message">Account Deactivated</p>-->
+            </div>
+            
+            <div class="update-profile" id="update-profile">
+                <h2>Update Profile</h2>
+                
+                <form onsubmit="modalControl('status-dialog')">
+                    <label for="file"><img src="./images/dum-img.jpg" alt="" width="120" style="border-radius: 50%"></label>
+                    <input type="file" name="file" id="file" class="inputfile" accept="image/*"/>
+                    
+                    <div>
+                        <label>First Name:</label>
+                        <input type="text">
+                    </div>
+                    
+                    <div>
+                        <label>Last Name:</label>
+                        <input type="text">
+                    </div>
+                    
+                    <div>
+                        <label>Email:</label>
+                        <input type="text">
+                    </div>
+                    
+                    <input type="submit" value="Update" onclick="la('update-profile')">
+                </form>
+            </div>
+            
+            <div id="change-password" class="change-password">
+                <h2>Change Password</h2>
+                
+                <form>
+                    <div>
+                        <label>Old Password:</label>
+                        <input type="text">
+                    </div>
+                    
+                    <div>
+                        <label>New Password:</label>
+                        <input type="text">
+                    </div>
+                    
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    
     <script src="./js/menu-control.js"></script>
+    <script src="./js/modal-control.js"></script>
 </body>
 </html>
