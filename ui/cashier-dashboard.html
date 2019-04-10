@@ -12,7 +12,7 @@
     <header class="header outer-spacing">
         <div class="header__inner row-max-size row-max-size--90">
             <div id="menu-more" class="header__menu-more">&#x2630</div>
-            <h1 class="header__title">Transaction Details</h1>
+            <h1 class="header__title">Cashier Dashboard</h1>
         </div>
     </header>
     
@@ -23,27 +23,22 @@
                     <div class="close-aside-container">
                         <button id="close" class="close-aside">&#x00D7</button>
                     </div>
-                    <li><a href="">Update Profile</a></li>
-                    <li><a href="">Logout</a></li>
+                    <li><a href="./user-profile.html">Profile</a></li>
+                    <li><a href="./index.html">Logout</a></li>
                 </ul>
             </aside>
 
             <main class="main">
-                <form class="form" action="">
-                    <input class="form__text" type="text" placeholder="Search for account by email or name">
-                    <input class="form__button button button--cta" type="submit" value="Search">
-                </form>
-                
                 <ul class="list list--dashboard">
-                    <li class="list-item list-item--dashboard">Deposit</li>
-                    <li class="list-item list-item--dashboard">Withdrawal</li>
+                    <li class="list-item list-item--dashboard" onclick="makeTrans(0)">Deposit</li>
+                    <li class="list-item list-item--dashboard" onclick="makeTrans(1)">Withdrawal</li>
                 </ul>
                 
                 <div class="c-trans">
                     <h3>Recents Transactions</h3>
 
                     <ul class="list list--c-trans">
-                        <li class="trans">
+                        <li class="trans" onclick="linkToTrans()">
                             <div>
                                 <small>Success</small>
                                 <p>24th Mar, 2019</p>
@@ -62,7 +57,7 @@
                             </div>
                         </li>
 
-                        <li class="trans">
+                        <li class="trans" onclick="linkToTrans()">
                             <div>
                                 <small>Success</small>
                                 <p>24th Mar, 2019</p>
@@ -81,7 +76,7 @@
                             </div>
                         </li>
 
-                        <li class="trans">
+                        <li class="trans" onclick="linkToTrans()">
                             <div>
                                 <small>Fail</small>
                                 <p>24th Mar, 2019</p>
@@ -100,7 +95,7 @@
                             </div>
                         </li>
 
-                        <li class="trans">
+                        <li class="trans" onclick="linkToTrans()">
                             <div>
                                 <small>Success</small>
                                 <p>24th Mar, 2019</p>
@@ -119,7 +114,7 @@
                             </div>
                         </li>
 
-                        <li class="trans">
+                        <li class="trans" onclick="linkToTrans()">
                             <div>
                                 <small>Success</small>
                                 <p>24th Mar, 2019</p>
@@ -138,7 +133,7 @@
                             </div>
                         </li>
 
-                        <li class="trans">
+                        <li class="trans" onclick="linkToTrans()">
                             <div>
                                 <small>Success</small>
                                 <p>24th Mar, 2019</p>
@@ -157,7 +152,7 @@
                             </div>
                         </li>
 
-                        <li class="trans">
+                        <li class="trans" onclick="linkToTrans()">
                             <div>
                                 <small>Success</small>
                                 <p>24th Mar, 2019</p>
@@ -176,7 +171,7 @@
                             </div>
                         </li>
 
-                        <li class="trans">
+                        <li class="trans"  onclick="linkToTrans()">
                             <div>
                                 <small>Success</small>
                                 <p>24th Mar, 2019</p>
@@ -195,7 +190,7 @@
                             </div>
                         </li>
 
-                        <li class="trans">
+                        <li class="trans" onclick="linkToTrans()">
                             <div>
                                 <small>Success</small>
                                 <p>24th Mar, 2019</p>
@@ -214,7 +209,7 @@
                             </div>
                         </li>
 
-                        <li class="trans">
+                        <li class="trans" onclick="linkToTrans()">
                             <div>
                                 <small>Success</small>
                                 <p>24th Mar, 2019</p>
@@ -242,6 +237,47 @@
         <p>Made with love by komsic</p>
     </footer>
     
+    <div class="modal" id="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-body">
+            <button class="modal-close" id="modal-close">close</button>
+            
+            <div class="make-trans" id="make-trans">
+                <h4 class="modal-title">New Transaction</h4>
+                <form onsubmit="modalControl('status-dialog')" id="create-acct" 
+                   class="create-acct create-acct-form">
+                    <div>
+                        <label for="trans-type">Transaction Type:</label>
+                        <select name="acct-type" id="trans-type">
+                            <option value="deposit">Deposit</option>
+                            <option value="withdrawal">Withdrawal</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="acct-no-field">Account Number:</label>
+                        <input type="number" id="acct-no-field">
+                    </div>
+                    
+                    <div>
+                        <label for="acct-no-field">Amount:</label>
+                        <input type="number" id="acct-no-field">
+                    </div>
+                    
+                    <input type="submit" onclick="la('make-trans')" value="Make Transaction" class="form-btn">
+                </form>
+            </div>
+            
+            <div class="status-dialog" id="status-dialog">
+                <h2>Status</h2>
+                <img src="./images/green-check.png" alt="status icon">
+                <h4>Success</h4>
+                <p id="status-dialog__more-message">Transaction Successful</p>
+            </div>
+        </div>
+    </div>
+    
     <script src="./js/menu-control.js"></script>
+    <script src="./js/modal-control.js"></script>
 </body>
 </html>
